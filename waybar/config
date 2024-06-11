@@ -1,0 +1,52 @@
+{
+    "layer": "top",
+    "position": "top",
+    "margin-top": 10,
+    "modules-left": ["clock", "pulseaudio", "backlight"],
+    "modules-right": ["battery", "network"],
+
+    "battery": {
+        "format": "{icon}  {capacity}%",
+        "format-charging": "󰂄  {capacity}%",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    },
+
+    "clock": {
+        "format": "󰥔   {:%I:%M %p}",
+        "format-alt": "󰥔   {:%a, %d. %b  %I:%M %p}",
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "󰂱  {volume}%",
+        "format-muted": "󰖁",
+        "scroll-step": 1,
+        "on-click": "pavucontrol",
+        "ignored-sinks": ["Easy Effects Sink"],
+        "format-icons": {
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": "󰋎 ",
+            "phone": " ",
+            "portable": " ",
+            "car": "",
+            "default": ["󰖀", "󰕾"]
+        },
+    },
+
+    "network": {
+        "interface": "wlo1",
+        "format": "{ifname}",
+        "format-wifi": "{icon}   {essid}",
+        "format-ethernet": "󰈀   {ipaddr}/{cidr}",
+        "format-disconnected": "󰤭   disconnected",
+        "max-length": 50,
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
+    },
+
+    "backlight": {
+        "device": "nvidia_wmi_ec_backlight",
+        "format": "{icon}   {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"]
+    }
+}

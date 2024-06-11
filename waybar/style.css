@@ -1,0 +1,57 @@
+@import url("colors.css");
+
+* {
+    font-family: 'SF Pro Text', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 50px;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: @fg;
+}
+
+.modules-left {
+    margin-left: 12px;    
+}
+
+.modules-right {
+    margin-right: 12px;    
+}
+
+#battery,
+#pulseaudio,
+#backlight {
+    color: @blue;
+    background-color: @bg;
+    margin: 0 6px 0 6px;
+    padding: 0 15px 0 15px; /* top, right, bottom, left */
+}
+
+#network {
+    color: @blue;
+    background-color: @bg;
+    margin: 0 0px 0 6px;
+    padding: 0 15px 0 15px; /* top, right, bottom, left */
+}
+
+#clock {
+    color: @blue;
+    background-color: @bg;
+    margin: 0 6px 0 0;
+    padding: 0 15px 0 15px;
+}
+
+#network {
+    color: @blue;
+}
+
+#pulseaudio {
+    color: @blue;
+}
+
+#backlight {
+    color: @blue;
+}
+
